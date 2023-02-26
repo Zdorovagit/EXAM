@@ -24,6 +24,6 @@ for i in range(1, 6):
             if newprice != None:
                 title = product.find('a', class_='product-card__title')
                 print(title.text)
-                with open('analog.txt', 'w', encoding='utf-8') as file:
+                with open('analog.txt', 'a', encoding='utf-8') as file:
                     file.write(
                         f"{title.text} {oldprice.text.replace('NBSP', '')} {newprice.text.replace('NBSP', '')}" '\n')
